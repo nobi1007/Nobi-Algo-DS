@@ -1,0 +1,5 @@
+Here, we we will see the idea of using linked lists (in JAVA 8) and what they are.
+The main idea behind using linked list over arrays is that the insertion and deletion, here, has time complexity of O(1).
+
+Basic Code for starting with linked lists:
+
