@@ -1,4 +1,6 @@
 /*
+Author - Shyam Mittal ( aka : nobi1007 )
+
 Following methods are covered in the following code:
 1 - Adding the data at last of the list
 2 - Adding the value infront of the list
@@ -21,7 +23,7 @@ class LinkedListJava2{
         }
     }
 
-    //the append method adds the new value at the last of the list.
+    // 1 - the append method adds the new value at the last of the list.
     public static Node append(Node head, int value){
         if(head==null){
             head = new Node(value);
@@ -37,7 +39,7 @@ class LinkedListJava2{
         return head;
     }
 
-    //the lappend method adds the new value in front of the list.
+    // 2 - the lappend method adds the new value in front of the list.
     public static Node lappend(Node head, int value){
         if(head == null){
             head = new Node(value);
@@ -50,7 +52,7 @@ class LinkedListJava2{
         }
     }
 
-    //printList method prints all the values starting from the provided head.
+    // 6 - printList method prints all the values starting from the provided head.
     public static void printList(Node head){
         if(head!=null){
             while(head!=null){
@@ -59,7 +61,7 @@ class LinkedListJava2{
             }
         }
     }
-
+    // the Driver Code !!!
     public static void main(String args[]){
         Node head = new Node(1);
         head = append(head,2);
