@@ -6,10 +6,11 @@ Following methods are covered in the following code:
 4 - Reversing the linked list and returning the head node
 5 - Deleting the value from the list at the specified location
 6 - Printing the Linked List from the provided head
-7 - MOE TO ADD
+7 - MORE TO ADD
 */
 
 import java.util.*;
+
 class LinkedListJava2{
     static class Node{
         public int data;
