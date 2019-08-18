@@ -1,4 +1,6 @@
 /*
+Author - Shyam Mittal ( aka : nobi1007 )
+
 Following methods are covered in the following code:
 1 - Adding the data at last of the list -- done
 2 - Adding the value infront of the list -- done
@@ -149,6 +151,7 @@ class LinkedListJava2{
     }
 
 
+    // the Driver Code !!!
     public static void main(String args[]){
         Node head = new Node(1);
         head = append(head,2);
