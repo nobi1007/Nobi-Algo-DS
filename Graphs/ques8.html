@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var index = 0;
+            var allElements = {}
+            $(document).ready(function(){					
+                $("#btn1").click(function(){
+                    //alert(allElements);
+                    var name = $("input:text").val().toString();
+                    if(name.localeCompare("")!=0){
+                        $("#myList").append("<li id="+index.toString()+">"+name+"</li>");
+                        allElements[index] = name.toLowerCase();
+                        index+=1;
+                        var arr3 = Object.keys(allElements);
+                        var i;
+                        for(i=0;i<arr3.length;i++){
+                            if(i%2!=0){
+                                $("#"+arr3[i].toString()).css('background-color','yellow');
+                            }
+                            else{
+                                $("#"+arr3[i].toString()).css('background-color','white');
+                            }
+                        }                      
+                        // $("#one").val("");  
+                    }
+                    else{
+                        alert("Invalid Input");
+                    }
+                });
+                $("#btn2").click(function(){			
+                    var name = $("input:text").val().toString();
+                    if(name.localeCompare("")!=0){
+                    //alert(name);                  
+                        var arr2 = Object.keys(allElements);
+                        //alert((arr2.length).toString());
+                        var i=0;
+                        var index2 = -1;
+                        for(i=0;i<arr2.length;i++){
+                            if(allElements[arr2[i]] == name.toLowerCase()){
+                                index2 = arr2[i];
+                            }
+                        }
+                            // var index2 = allElements.indexOf(name.toLowerCase());
+                            // alert(name + " "+ index2.toString());
+                        if(index2>=0){
+                            $("#"+index2.toString()).remove();
+                            delete allElements[index2];
+                        }
+                        else{
+                            alert("Element not found in the list !");
+                        }
+
+                        var arr3 = Object.keys(allElements);
+                        var i;
+                        for(i=0;i<arr3.length;i++){
+                            if(i%2!=0){
+                                $("#"+arr3[i].toString()).css('background-color','yellow');
+                            }
+                            else{
+                                $("#"+arr3[i].toString()).css('background-color','white');
+                            }
+
+                        }
+                        // $("#one").val("");  
+                    }
+                    else{
+                        alert("Invalid Input");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>My super nifty to-do list</h1>
+        <ul id="myList">
+        </ul>
+        <input type="text" id="one"></input>
+        <button id="btn1">add</button>
+        <button id="btn2">remove</button>
+    </body>
+</html>
